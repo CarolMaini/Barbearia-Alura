@@ -1,3 +1,7 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
 header {
     background: #bbbbbb;
     padding: 20px 0;
@@ -92,3 +96,34 @@ nav a {
         font-size: 13px;
         margin: 20px 0 0;
     }
+
+
+    /* RESPONSIVIDADE */
+
+
+@media screen and (max-width: 480px) {
+    .caixa, .produtos {
+        position: center;
+        width: 100%;
+    }
+
+    h1, .produtos, .produto-descricao, .produto-preco, .img {
+        text-align: center;
+    }
+
+    nav  {
+        position: static;
+    }
+
+    .imagem-cabelo {
+        display: flex;
+        width: 100px;
+        height: 100px;
+    }
+
+    .produtos {
+        display: flex;
+        justify-content: center;
+        }
+
+}

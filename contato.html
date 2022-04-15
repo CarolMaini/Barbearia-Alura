@@ -11,7 +11,7 @@
 <body>
         <header>
                 <div class="caixa">
-                <h1><img src="logo.png"></h1>
+                <h1><img src="logo.png" alt="Logo da Barbearia Alura"></h1> <!---ALT para melhorar a experiência visual-->
                 
                     <nav>
                     <ul>
@@ -24,41 +24,87 @@
         </header>
             <main>
         <form>
+
+            <!---REQUIRED TORNA O CAMPO OBRIGATÓRIO-->
+            <!---PLACEHOLDER ECEMPLIFICA PARA O USUARIO A FORMA DE PREENCHIMENTO-->
                 <label for="nomesebrenome">Nome e Sobrenome</label>
-                <input type="text" id="nomesobrenome" class="input-padrao">
+                <input type="text" id="nomesobrenome" class="input-padrao" required >
 
                 <label for="email">Email</label>
-                <input type="text" id="email" class="input-padrao">
+                <input type="text" id="email" class="input-padrao" required placeholder="email@email.com">
 
                 <label for="telefone">Telefone</label>
-                <input type="text" id="telefone" class="input-padrao">
+                <input type="text" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
 
 
 
 
                 <label for="mensagem">Mensagem</label>
-                <textarea cols="50" rows="10" id="mensagem"></textarea>
+                <textarea cols="50" rows="10" id="mensagem"></textarea required>
 
 
-                <div>
-                    <p>Como prefere o nosso contato?</p>
-                    <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">Email</label>
-                    
+                        <fieldset>
+                            <!---checked já deixa uma marcação para o usuario-->
+                            <legend>Como prefere o nosso contato?</legend>
+                            <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">Email</label>
+                            
 
-                    <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label>
-                    
+                            <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label>
+                            
 
-                    <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp">Whatsapp</label>
-                    
-                </div>
+                            <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked>Whatsapp</label>
+                            
+                        </fieldset>
 
-                <label class="checkbox"><input type="checkbox">Gostaria de receber nossas novidades por email?</label>
+                            <fieldset>
+                                <legend>Qual horário prefere ser atendido?</legend>
+                                    <select>
+                                        <option>Manhã</option>
+                                        <option>Tarde</option>
+                                        <option>Noite</option>
+                                    </select>
+                            </fieldset>
+                <label class="checkbox"><input type="checkbox" checked>Gostaria de receber nossas novidades por email?</label>
 
-                <input type="submit" value="Enviar Formulário">
+                <input type="submit" value="Enviar Formulário" class="enviar">
         </form>
+
+        
+        
+        <!---A tag table, que representa a tabela
+A tag tr, que representa a linha da tabela
+A tag td, que representa a célula da tabela
+A tag thead, que representa o cabeçalho da tabela
+A tag tbody, que representa o corpo da tabela
+A tag th, que representa a célula do cabeçalho da tabela
+A tag tfoot, que representa o rodapé da tabela-->
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Dia</th>
+                    <th>Horário</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Segunda</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Quarta</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Sexta</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+            </tbody>
+        </table>
+
             </main>
         <footer>
-            <img src="logo-branco.png">
+            <img src="logo-branco.png" alt="Logo da Barbearia Alura">
             <p class="copyright">&copy; Copyright Barbearia Alura - 2021</p>
         </footer>
         </body>
